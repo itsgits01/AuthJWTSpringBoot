@@ -19,6 +19,7 @@ public class ApplicationConfiguration {
         this.userRepository = userRepository;
     }
 
+
     @Bean
     UserDetailsService userDetailsService() {
         return username -> userRepository.findByEmail(username)

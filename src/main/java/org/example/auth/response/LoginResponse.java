@@ -1,4 +1,4 @@
-package org.example.auth;
+package org.example.auth.response;
 
 public class LoginResponse {
     private String token;

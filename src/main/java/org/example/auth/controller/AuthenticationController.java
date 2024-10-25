@@ -1,6 +1,6 @@
 package org.example.auth.controller;
 
-import org.example.auth.LoginResponse;
+import org.example.auth.response.LoginResponse;
 import org.example.auth.dtos.LoginUserDto;
 import org.example.auth.dtos.RegisterUserDto;
 import org.example.auth.entity.User;
@@ -8,8 +8,6 @@ import org.example.auth.service.AuthenticationService;
 import org.example.auth.service.JwtService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
-import java.security.Principal;
 
 @RequestMapping("/auth")
 @RestController
