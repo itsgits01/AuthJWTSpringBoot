@@ -44,10 +44,26 @@ The **Multi Asset Manager** is a **Spring Boot** application that allows users t
 - **POST** `/api/auth/signup` - Sign up a new user.
 - **POST** `/api/auth/login` - Log in and receive a JWT token.
 
+### User Management Endpoints
+- **GET** `/users/me` - Retrieve authenticated user details.
+- **GET** `/users/` - Retrieve a list of all users.
+
+
 ### Asset Data Endpoints
 
 - **GET** `/api/assets` - View a list of assets and their last 5 years of historical data.
 - **GET** `/api/assets/{ticker}/data` - Retrieve specific asset data by ticker symbol.
+
+### Stock Data Endpoints
+**POST** `/api/stocks/fetch` - Fetches and stores data for the top 100 NASDAQ stocks.
+**GET** `/api/stocks/{symbol}/percentage-changes` - Retrieves percentage changes in stock value over various time intervals (1 month, 3 months, 6 months, etc.).
+**GET** `/api/stocks/predict` - Predicts today’s stock price for a specific ticker symbol by calling the Flask server's LSTM model.
+
+### Gold Data Endpoints
+**GET** `/api/gold/fetch` - Fetches and stores 5 years of historical gold data.
+
+### Cryptocurrency Data Endpoints
+**GET** `/api/fetch-bitcoin-data` - Fetches and stores 5 years of Bitcoin data.
 
 ### Prediction Endpoint (Flask API)
 
